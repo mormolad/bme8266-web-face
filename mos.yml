@@ -1,0 +1,63 @@
+author: pikachoo
+description: picochip firmware
+version: 2.1
+manifest_version: 2017-05-18
+libs_version: ${mos.version}
+modules_version: ${mos.version}
+mongoose_os_version: ${mos.version}
+
+config_schema:
+
+  - ["wifi.ap.enable", true]
+  - ["wifi.ap.ssid", "picofac111"]
+  - ["wifi.ap.pass", "11111112"]
+  - ["http.index_files", "index.html"]
+  - ["stats", "o", {title: "stats json pack"}]
+  - ["output2", "s", "{\"from\":63600,\"to\":82800,\"id\":\"output2\",\"stateSwitch\": true,\"typeRegulator\":\"dayTimer\"}", {title: "set output 1"}]
+  - ["output4", "s", "{\"duration\":30,\"quantity\":4,\"id\":\"output4\",\"stateSwitch\":true,\"typeRegulator\":\"periodTimer\"}", {title: "set output 2"}]
+  - ["output3", "s", "{\"from\":63600,\"to\":82800,\"id\":\"output3\",\"stateSwitch\":true,\"typeRegulator\":\"dayTimer\"}", {title: "set output 3"}]
+  - ["output1", "s", "{\"id\":\"output1\",\"setpoint\":25,\"stateSwitch\":true,\"typeRegulator\":\"setting\"}",{title: "set output 4"}]
+  - ["setNet", "s", {title: "set net"}]
+  - ["sys", "o", {title: "System settings"}]
+  - ["wifi.sta.enable", true]
+  - ["wifi.sta.ssid", "P40"]
+  - ["wifi.sta.pass", "11111113"]
+  - ["mqtt.server", "192.168.43.131:1883"] 
+  - ["mqtt.enable", true]
+  - ["mqtt.user", "1"]
+  - ["mqtt.pass", "1"]
+  - ["i2c.enable", true]
+  - ["i2c.sda_gpio", "i", 4, {title: "Pin to use for SDA"}]
+  - ["i2c.scl_gpio", "i", 5, {title: "Pin to use for SCL"}]
+ 
+tags:
+  - arduino
+  - c
+  - js
+  - hw
+  - docs:arduino:BME280
+
+filesystem:
+  - fs
+
+includes:
+  - include
+  
+libs:
+  - origin: https://github.com/mongoose-os-libs/boards
+  - origin: https://github.com/mongoose-os-libs/mjs
+  - origin: https://github.com/mongoose-os-libs/core
+  - origin: https://github.com/mongoose-os-libs/wifi
+  - origin: https://github.com/mongoose-os-libs/http-server
+  - origin: https://github.com/mongoose-os-libs/mqtt
+  - origin: https://github.com/mongoose-os-libs/rpc-common
+  - origin: https://github.com/mongoose-os-libs/rpc-uart
+  - origin: https://github.com/mongoose-os-libs/rpc-service-config
+  - origin: https://github.com/mongoose-os-libs/rpc-service-fs
+  - origin: https://github.com/mongoose-os-libs/rpc-service-gpio
+  - origin: https://github.com/mongoose-os-libs/rpc-service-wifi
+  - origin: https://github.com/mongoose-os-libs/arduino-compat
+  - origin: https://github.com/mongoose-os-libs/arduino-wire
+  - origin: https://github.com/mongoose-os-libs/arduino-spi
+  - origin: https://github.com/mongoose-os-libs/sntp
+  - origin: https://github.com/mongoose-os-libs/bme280

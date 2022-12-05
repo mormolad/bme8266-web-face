@@ -1,0 +1,97 @@
+body {
+    background-color: #31572a;
+}
+
+.button {
+    color: rgb(0, 0, 0);
+    background-color: #31572a;
+    height: 30px;
+    width: 80px;
+}
+
+.time {
+    width: 120px;
+    background-color: #3d6a34;
+    color: #000000;
+}
+
+.range {
+    -webkit-appearance: none;
+    border-radius: 2px;
+    width: 80%;
+    height: 3px;
+    outline: none;
+    background: #000000;
+}
+
+.range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 18px;
+    height: 20px;
+    background: #173f2b;
+    border-radius: 18px;
+    cursor: pointer;
+    transition: .1s;
+}
+
+.rangeDiv {
+    width: 50%;
+    justify-content: center;
+}
+
+.rangeValue {
+    margin-left: 10px;
+    font-size: 20pt;
+}
+
+.row {
+    width: 30%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center
+}
+
+.input {
+    background-color: #31572a;
+}
+
+.rangeOn {
+    -webkit-appearance: none;
+    border-radius: 2px;
+    width: 30px;
+    height: 3px;
+    outline: none;
+    background: #000000;
+}
+
+.rangeOn::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 18px;
+    height: 20px;
+    background: #173f2b;
+    border-radius: 18px;
+    cursor: pointer;
+    transition: .1s;
+}
+
+.radio {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #000;
+    transition: 0.2s all linear;
+    outline: none;
+    margin-right: 5px;
+    position: relative;
+    top: 4px;
+    background-color: #31572a;
+}
+
+input:checked {
+    border: 6px solid #173f2b;
+}

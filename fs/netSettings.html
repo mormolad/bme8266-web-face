@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Сетевые настройки</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+    <div align="center">
+        <div>
+            <h1 class="gc">Настройки сетевого подключения: <br> </h1>
+        </div>
+        <h3>Настройки точки доступа для конфигурации:</h3>
+        <h4>имя точки доступа</h4>
+        <input type="text" id="nameAp" class="input" size="40"> <br>
+        <h4>пароль точки доступа</h4>
+        <input type="password" id="passwordAp" class="input" size="40"> <br>
+
+        <h3>Настройки точки доступа в интернет:</h3>
+        <h4>имя точки доступа</h4>
+        <input type="text" id="nameSta" class="input" size="40"> <br>
+        <h4>пароль точки доступа</h4>
+        <input type="password" id="passwordSta" class="input" size="40"> <br>
+        <h3>Настройки MQTT броккера:</h3>
+        <h4>IP MQTT брокера</h4>
+        <input type="text" id="ipMqtt" size="40" class="input"> <br>
+
+        <p><br><input type="button" value="Сохранить" id="saveSetting" class="button"></p>
+    </div>
+
+
+    </div>
+    <script type="module" src="netSetting.js"></script>
+</body>
